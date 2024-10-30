@@ -34,7 +34,7 @@ public class HelloController{
 	            
 	            stmt.execute(); //thực thi câu lệnh
 	            
-	            return new ResponseEntity<>("Hoan thanh", HttpStatus.OK);
+	            return new ResponseEntity<>("Hoan thanh 1", HttpStatus.OK);
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	            return new ResponseEntity<>("Loi thuc hien", HttpStatus.NOT_FOUND);
