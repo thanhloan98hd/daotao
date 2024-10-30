@@ -27,7 +27,7 @@ public class HelloController{
 	public ResponseEntity<String> processData(@RequestBody String request) {
 		try (
 				Connection conn = dataSource.getConnection();
-	            CallableStatement stmt = conn.prepareCall("{call dev_tienhm_test_api_pkg.insert_data(?)}")
+	            CallableStatement stmt = conn.prepareCall("{call trungapiservice.trunginsert(?)}")
 	        ) {
 			
 	            stmt.setString(1, request); //set value cho ? thứ nhất
